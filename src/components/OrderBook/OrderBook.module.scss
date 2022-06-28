@@ -1,0 +1,62 @@
+@import '../../scss/variables';
+
+.orderBook {
+  padding: $padding-container;
+  background-color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+%table {
+  & span {
+    width: 50%;
+    display: flex;
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.option {
+  @extend %table;
+
+  display: flex;
+  color: #aaa;
+  width: 100%;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  padding: 0 12px;
+}
+
+.content {
+  height: 100%;
+  overflow: auto;
+  box-shadow: $scroller-shadow;
+}
+
+.content:last-child {
+  margin-top: 25px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  @extend %table;
+
+  display: flex;
+  padding: 6px 12px;
+  font-size: 0.9em;
+}
+
+.green {
+  color: $green;
+}
+
+.red {
+  color: $red;
+}
